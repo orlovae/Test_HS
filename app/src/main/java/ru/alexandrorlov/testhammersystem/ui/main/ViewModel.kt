@@ -9,21 +9,18 @@ import kotlinx.coroutines.launch
 import ru.alexandrorlov.testhammersystem.R
 import ru.alexandrorlov.testhammersystem.base.BaseViewModel
 import ru.alexandrorlov.testhammersystem.base.Result
-import ru.alexandrorlov.testhammersystem.data.Repository
 import ru.alexandrorlov.testhammersystem.ui.main.state.MealState
 import ru.alexandrorlov.testhammersystem.ui.main.state.MealUiState
-import ru.alexandrorlov.testhammersystem.ui.model.EntityMeal
-import timber.log.Timber
+import ru.alexandrorlov.testhammersystem.ui.model.MealUi
+import ru.alexandrorlov.testhammersystem.use_case.UseCase
 import java.net.UnknownHostException
 import javax.inject.Inject
 
-
 @HiltViewModel
 class ViewModel @Inject constructor(
-    private val repository: Repository
+    private val useCase: UseCase
 ) :
     BaseViewModel<MealUiState>(MealUiState(MealState.Loading)) {
-
 
     private val _uiState = MutableStateFlow(MealUiState())
     val uiState = _uiState.asStateFlow()
@@ -35,11 +32,11 @@ class ViewModel @Inject constructor(
     private fun fetchMeal() {
         viewModelScope.launch {
             try {
-                val result = repository.getMeals()
+                val result = useCase.execute()
                 if (result is Result.Success) {
                     _uiState.update {
                         it.copy(
-                            mealState = MealState.Data(result.data as List<EntityMeal>)
+                            mealState = MealState.Data(result.data as List<MealUi>)
                         )
                     }
                 }
@@ -57,7 +54,6 @@ class ViewModel @Inject constructor(
     }
 
     private fun errorHandling(exception: Exception) {
-        Timber.tag("OAE").d("exception = $exception")
         val idMessage = when (exception) {
             is UnknownHostException ->
                 R.string.exception_unknownHostException

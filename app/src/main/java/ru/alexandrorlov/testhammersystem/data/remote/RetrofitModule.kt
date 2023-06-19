@@ -8,7 +8,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import ru.alexandrorlov.testhammersystem.config.NetworkConfig
+import ru.alexandrorlov.testhammersystem.config.DataRemoteConfig
 
 object RetrofitModule {
     private val json = Json {
@@ -38,7 +38,7 @@ object RetrofitModule {
     @Suppress("EXPERIMENTAL_API_USAGE")
     fun instance(): Retrofit = Retrofit.Builder()
         .baseUrl(
-            NetworkConfig.getBaseURLGet()
+            DataRemoteConfig.getBaseURLGet()
         )
         .addConverterFactory(json.asConverterFactory(contentType))
         .addCallAdapterFactory(CoroutineCallAdapterFactory())

@@ -1,6 +1,6 @@
 package ru.alexandrorlov.testhammersystem.ui.model
 
-data class EntityMeal(
+data class MealUi(
     val id: Int? = null,
     val title: String? = null,
     val drinkAlternate: String? = null,

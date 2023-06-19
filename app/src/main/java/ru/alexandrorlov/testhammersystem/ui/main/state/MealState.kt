@@ -2,12 +2,12 @@ package ru.alexandrorlov.testhammersystem.ui.main.state
 
 import androidx.annotation.StringRes
 import ru.alexandrorlov.testhammersystem.base.UiState
-import ru.alexandrorlov.testhammersystem.ui.model.EntityMeal
+import ru.alexandrorlov.testhammersystem.ui.model.MealUi
 
 sealed class MealState : UiState {
     object Loading : MealState()
 
-    data class Data(val mealList: List<EntityMeal>? = null) : MealState()
+    data class Data(val mealList: List<MealUi>? = null) : MealState()
 
     val data: Data?
         get() = this as? Data
