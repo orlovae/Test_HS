@@ -1,6 +1,6 @@
 package ru.alexandrorlov.testhammersystem.config
 
-object DataRemoteConfig {
+object DataRemote {
 
     fun getBaseURLGet(): String {
         return BASE_URL_GET

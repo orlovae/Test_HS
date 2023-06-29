@@ -8,7 +8,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import ru.alexandrorlov.testhammersystem.config.DataLocalConfig
+import ru.alexandrorlov.testhammersystem.config.DataLocal
 import ru.alexandrorlov.testhammersystem.data.local.LocalDataBase
 import ru.alexandrorlov.testhammersystem.data.local.RepositoryLocal
 import ru.alexandrorlov.testhammersystem.data.remote.ApiService
@@ -38,7 +38,7 @@ class RepositoryModule {
         return Room.databaseBuilder(
             context,
             LocalDataBase::class.java,
-            DataLocalConfig.DATABASE_NAME
+            DataLocal.DATABASE_NAME
         )
             .build()
     }

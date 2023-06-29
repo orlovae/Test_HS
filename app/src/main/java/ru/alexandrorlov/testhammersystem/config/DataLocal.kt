@@ -1,6 +1,6 @@
 package ru.alexandrorlov.testhammersystem.config
 
-object DataLocalConfig {
+object DataLocal {
     const val DATABASE_NAME = "meals.db"
 
     object Meal {

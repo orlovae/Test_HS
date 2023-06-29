@@ -1,4 +1,4 @@
-package ru.alexandrorlov.testhammersystem.ui.model
+package ru.alexandrorlov.testhammersystem.ui.model.ui
 
 data class MealUi(
     val id: Int? = null,

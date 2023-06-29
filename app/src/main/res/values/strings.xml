@@ -3,4 +3,15 @@
     <!-- Error -->
     <string name="exception_unknownHostException">Пожалуйста проверьте соединение, нет доступа к интернет</string>
     <string name="exception_Exception">Что-то пошло не так</string>
+    <!-- Bottom Menu -->
+    <string name="bottom_menu_menu">Меню</string>
+    <string name="bottom_menu_profile">Профиль</string>
+    <string name="bottom_menu_basket">Корзина</string>
+    <string name="top_bar_select_country">Выбрать город</string>
+    <string name="top_bar_QR_Code">QR код</string>
+    <!-- Menu Menu -->
+    <string name="menu_menu_price_from">от</string>
+    <string name="menu_menu_price_rub">р</string>
+    <!-- StateLoading -->
+    <string name="loading">Идёт загрузка данных, пожалуйста подождите.</string>
 </resources>

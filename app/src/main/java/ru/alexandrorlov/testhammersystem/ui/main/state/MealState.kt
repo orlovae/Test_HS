@@ -2,7 +2,7 @@ package ru.alexandrorlov.testhammersystem.ui.main.state
 
 import androidx.annotation.StringRes
 import ru.alexandrorlov.testhammersystem.base.UiState
-import ru.alexandrorlov.testhammersystem.ui.model.MealUi
+import ru.alexandrorlov.testhammersystem.ui.model.ui.MealUi
 
 sealed class MealState : UiState {
     object Loading : MealState()

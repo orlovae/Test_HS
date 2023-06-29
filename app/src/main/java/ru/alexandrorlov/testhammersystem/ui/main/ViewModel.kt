@@ -11,7 +11,7 @@ import ru.alexandrorlov.testhammersystem.base.BaseViewModel
 import ru.alexandrorlov.testhammersystem.base.Result
 import ru.alexandrorlov.testhammersystem.ui.main.state.MealState
 import ru.alexandrorlov.testhammersystem.ui.main.state.MealUiState
-import ru.alexandrorlov.testhammersystem.ui.model.MealUi
+import ru.alexandrorlov.testhammersystem.ui.model.ui.MealUi
 import ru.alexandrorlov.testhammersystem.use_case.UseCase
 import java.net.UnknownHostException
 import javax.inject.Inject
