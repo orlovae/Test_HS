@@ -18,7 +18,6 @@ import ru.alexandrorlov.testhammersystem.ui.theme.HSTypography
 import ru.alexandrorlov.testhammersystem.ui.theme.backgroundBottomBar
 import ru.alexandrorlov.testhammersystem.ui.theme.selectedContentColor
 import ru.alexandrorlov.testhammersystem.ui.theme.unSelectedContentColor
-import timber.log.Timber
 
 @Composable
 fun BottomNavigationBar(
@@ -64,7 +63,6 @@ fun BottomNavigationBar(
                             launchSingleTop = true
                             restoreState = true
                         }
-                        Timber.tag("OAE").d("OnClick in BottomBar")
                     },
                     colors = NavigationBarItemDefaults
                         .colors(
@@ -87,5 +85,6 @@ private object NoRippleTheme : RippleTheme {
 
     @Composable
     override fun rippleAlpha(): RippleAlpha = RippleAlpha(
-        0.0f, 0.0f, 0.0f, 0.0f)
+        0.0f, 0.0f, 0.0f, 0.0f
+    )
 }

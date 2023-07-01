@@ -19,7 +19,6 @@ object RetrofitModule {
     private val contentType = "application/json".toMediaType()
 
     private val loggingInterceptor = HttpLoggingInterceptor { message ->
-//        Timber.tag("OAE").d("Retrofit message = $message")
     }.apply {
         level = HttpLoggingInterceptor.Level.BODY
     }

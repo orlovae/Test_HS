@@ -1,7 +1,5 @@
 package ru.alexandrorlov.testhammersystem.base
 
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalDensity
 import ru.alexandrorlov.testhammersystem.ui.model.Meal
 import ru.alexandrorlov.testhammersystem.ui.model.MealEntity
 import ru.alexandrorlov.testhammersystem.ui.model.ui.MealUi
@@ -133,6 +131,3 @@ fun Meal.toMealEntity(): MealEntity {
         dateModified = this.dateModified ?: "",
     )
 }
-
-@Composable
-fun Int.pxToDp() = with(LocalDensity.current) { this@pxToDp.toDp() }

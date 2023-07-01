@@ -1,7 +1,6 @@
 package ru.alexandrorlov.testhammersystem.ui.main
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -24,7 +23,6 @@ import ru.alexandrorlov.testhammersystem.ui.components.top_bar.rememberToolbarSc
 @Composable
 fun MainScreen(
     navController: NavHostController,
-    paddingValues: PaddingValues
 ) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
 

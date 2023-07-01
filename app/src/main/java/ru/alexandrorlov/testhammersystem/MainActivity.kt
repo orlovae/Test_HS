@@ -36,8 +36,7 @@ class MainActivity : ComponentActivity() {
             HSTheme {
                 Scaffold() { paddingValues ->
                     MainScreen(
-                        navController = navController,
-                        paddingValues = paddingValues
+                        navController = navController
                     )
                 }
             }

@@ -8,7 +8,6 @@ import androidx.compose.ui.Modifier
 import ru.alexandrorlov.testhammersystem.ui.model.ui.FoodCategory
 import ru.alexandrorlov.testhammersystem.ui.theme.padding_normal
 
-
 @Composable
 fun ChipList(
     foodCategoryList: List<FoodCategory>,

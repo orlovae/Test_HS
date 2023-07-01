@@ -18,5 +18,4 @@ class NetworkHelperModule {
     fun provideNetworkHelper(@ApplicationContext context: Context): NetworkHelper =
         NetworkHelper(context)
 
-
 }

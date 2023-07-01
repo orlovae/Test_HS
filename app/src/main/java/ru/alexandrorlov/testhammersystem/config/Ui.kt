@@ -8,6 +8,6 @@ object UI {
     const val CITY_DEFAULT = "Москва"
     //Top Bar
     const val TOP_ROW_CONTENT_ID = "TopRowContent"
-    const val EXPANDED_BANNER_CONTENT_ID = "ExpandedBannerContent"
+    const val BANNER_CONTENT_ID = "BannerContent"
     const val CHIPS_CONTENT_ID = "ChipsContent"
 }
