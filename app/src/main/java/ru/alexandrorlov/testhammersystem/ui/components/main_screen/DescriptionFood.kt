@@ -15,14 +15,15 @@ import ru.alexandrorlov.testhammersystem.ui.theme.padding_normal
 fun DescriptionFood(
     title: String,
     description: String,
+    maxLine: Int,
     price: Int
 ) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(
-                start = padding_medium,
-                end = padding_normal,
+                start = padding_normal,
+                end = padding_medium,
                 top = padding_normal,
                 bottom = padding_normal
             ),
@@ -30,6 +31,8 @@ fun DescriptionFood(
         Text(
             text = title,
             style = HSTypography.titleLarge,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
             modifier = Modifier
                 .padding(
                     bottom = padding_medium
@@ -38,7 +41,7 @@ fun DescriptionFood(
         Text(
             text = description,
             style = HSTypography.bodyMedium,
-            maxLines = 4,
+            maxLines = maxLine,
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier
                 .padding(
